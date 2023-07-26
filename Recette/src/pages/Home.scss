@@ -5,6 +5,22 @@
     margin-top: 100px;
 }
 
+.filter {
+    margin-bottom: 10px;
+}
+
+.filter input {
+    width: 200px;
+}
+
+.filter button {
+    width: 100px;
+}
+
+.container-home .container-header {
+    height: 150px;
+}
+
 .container-home .sort-buttons {
     display: flex;
     gap: 5px;
@@ -17,7 +33,7 @@
     display: none;
   }
 
-.container-home > h3 {
+.container-home h3 {
     text-align: center;
 }
 
