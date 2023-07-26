@@ -28,8 +28,8 @@ const Home = () => {
 
         <h3>Recettes</h3>
         {sortedRecipes.map((recipe, i) => (
-          <div className='recipe'>
-            <Link to={`/details-recette/${i}`}>
+          <div className='recipe' key={recipe.id}>
+            <Link to={`/details-recette/${recipe.id}`}>
               <Recipe key={i} recipe={recipe} />
               </Link>
           </div>
