@@ -61,6 +61,11 @@ const RecetteDetails = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className='info'>
+                            <div className='steps'>
+                                {recipe.steps}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
