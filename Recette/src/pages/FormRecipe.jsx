@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import './FormRecipe.scss'
 import {useRecipes} from '../contexts/RecipeContexts'
 import Ingredient from '../components/Ingredient'
@@ -42,14 +42,12 @@ const Formulaire = () => {
     const addIngredient = e => {
         e.preventDefault()
         if (ingredients && ingredientsQuantity && ingredientsUnite) {
-            setIngredientList([
-                ...ingredientList,
-                {
-                    ingredients: ingredients,
-                    ingredientsQuantity: ingredientsQuantity,
-                    ingredientsUnite: ingredientsUnite
-                }
-            ])
+            const objIngredients = {
+                ingredients: ingredients,
+                ingredientsQuantity: ingredientsQuantity,
+                ingredientsUnite: ingredientsUnite
+            }
+            setIngredientList([...ingredientList, objIngredients]);
             setIngredients('');
             setIngredientsQuantity('');
             setIngredientsUnite('');
@@ -74,12 +72,8 @@ const Formulaire = () => {
             time: time,
             difficulty: difficulty,
             portion: portion,
-            tags: tags,
-            ingredientList: {
-                ingredients: ingredients,
-                ingredientsQuantity: ingredientsQuantity,
-                ingredientsUnite: ingredientsUnite
-            }
+            tagList: tagList,
+            ingredientList: ingredientList
         })
         setCompleteRecipe(true);
         resetFields();

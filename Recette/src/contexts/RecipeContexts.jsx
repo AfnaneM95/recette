@@ -14,7 +14,7 @@ const RecipesProvider = ({children}) => {
             time: 20,
             difficulty: "facile",
             portion: 2,
-            tags: ['tag1', 'tag2', 'tag3'],
+            tagList: ['tag1', 'tag2', 'tag3'],
             ingredientList: [{
                 ingredients: 'Farine',
                 ingredientsQuantity: 500,
@@ -35,7 +35,7 @@ const RecipesProvider = ({children}) => {
             time: 30,
             difficulty: "difficile",
             portion: 1,
-            tags: ['tag4', 'tag2', 'tag6'],
+            tagList: ['tag4', 'tag2', 'tag6'],
             ingredientList: [{
                 ingredients: 'Farine',
                 ingredientsQuantity: 500,
@@ -55,7 +55,7 @@ const RecipesProvider = ({children}) => {
             time: 10,
             difficulty: "moyen",
             portion: 4,
-            tags: ['tag1', 'tag7', 'tag5'],
+            tagList: ['tag1', 'tag7', 'tag5'],
             ingredientList: [{
                 ingredients: 'Farine',
                 ingredientsQuantity: 500,

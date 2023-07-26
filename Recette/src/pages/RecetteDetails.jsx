@@ -49,7 +49,7 @@ const RecetteDetails = () => {
                                     {recipe.difficulty}
                                 </div>
                                 <div className='tags'>
-                                    {recipe.tags.map((tag, i) => (
+                                    {recipe.tagList.map((tag, i) => (
                                         <Tag key={i} tag={tag}/>
                                     ))}
                                 </div>

@@ -1,11 +1,13 @@
-import React from 'react'
+import {useState} from 'react'
 import './Ingredient.scss'
 
 const Ingredient = ({ingredient, portionChange}) => {
+    const [portionFactor] = useState(ingredient.ingredientsQuantity / portionChange);
+
     return (
         <div>
             {portionChange && <div>
-                {ingredient.ingredientsQuantity * portionChange}
+                {portionFactor * portionChange}
                 {ingredient.ingredientsUnite} de {ingredient.ingredients}
             </div>}
             {!portionChange && <div>
