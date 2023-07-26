@@ -1,7 +1,6 @@
-import React from 'react'
 import './Tag.scss'
 
-const Tag = ({ tag }) => {
+const Tag = ({tag}) => {
     return (
         <div className='tag-comp'>
             #{tag}

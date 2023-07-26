@@ -25,7 +25,6 @@ const RecipesProvider = ({children}) => {
                     ingredientsQuantity: 500,
                     ingredientsUnite: 'g'
                 }]
-            //check param url react router dom
         },
         {
             id: uuidv4(),
@@ -74,13 +73,11 @@ const RecipesProvider = ({children}) => {
 
     }
 
-  
-
-  return (
-    <RecipeContext.Provider value={{ addRecipe, recipes }}>
-      {children}
-    </RecipeContext.Provider>
-  )
+    return (
+        <RecipeContext.Provider value={{addRecipe, recipes}}>
+            {children}
+        </RecipeContext.Provider>
+    )
 }
 
 export default RecipesProvider

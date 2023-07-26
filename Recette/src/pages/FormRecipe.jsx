@@ -5,7 +5,6 @@ import Ingredient from '../components/Ingredient'
 import {v4 as uuidv4} from 'uuid';
 import Tag from "../components/Tag.jsx";
 
-
 const Formulaire = () => {
     const [title, setTitle] = useState('')
     const [steps, setSteps] = useState('')
@@ -22,7 +21,6 @@ const Formulaire = () => {
     const [completeRecipe, setCompleteRecipe] = useState(false)
 
     const resetFields = () => {
-
         setTitle('')
         setSteps('')
         setPicture('')

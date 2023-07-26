@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import './Home.scss'
 import {useRecipes} from '../contexts/RecipeContexts'
 import Recipe from '../components/Recipe'
@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom'
 const Home = () => {
     const {recipes} = useRecipes();
     const [sortedRecipes, setSortedRecipes] = useState(recipes);
-
     const [inputText, setInputText] = useState("");
 
     const sortByTime = () => {
@@ -22,10 +21,7 @@ const Home = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-
     }
-
 
     const boop = () => {
         console.log(recipes)

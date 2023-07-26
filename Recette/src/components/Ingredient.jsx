@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import './Ingredient.scss'
 
 const Ingredient = ({ingredient, portionChange}) => {
     const [portionFactor] = useState(ingredient.ingredientsQuantity / portionChange);
