@@ -23,10 +23,6 @@ const Home = () => {
         e.preventDefault();
     }
 
-    const boop = () => {
-        console.log(recipes)
-    }
-
     return (
         <>
             <div className='container-home'>
@@ -41,7 +37,6 @@ const Home = () => {
                         <button onClick={sortByTime}>Trier par temps de préparation</button>
                     </div>
                 </div>
-                <button onClick={boop}>AAA</button>
                 {sortedRecipes.map((recipe, i) => (
                     recipe.title.toLowerCase().includes(inputText.toLowerCase()) &&
                     <div className='recipe' key={i}>
