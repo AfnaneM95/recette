@@ -14,6 +14,7 @@ const Formulaire = () => {
     const [portion, setPortion] = useState('')
     const [tags, setTags] = useState('')
     const [tagList, setTagList] = useState([])
+    const [preTags, setPreTags] = useState(['Entree', 'Plat', 'Dessert'])
     const [ingredientList, setIngredientList] = useState([])
     const [ingredients, setIngredients] = useState('')
     const [ingredientsQuantity, setIngredientsQuantity] = useState('')
@@ -58,6 +59,10 @@ const Formulaire = () => {
             setTagList([...tagList, tags])
             setTags('');
         }
+    }
+
+    const addTagToList = (tag) => {
+        setTagList([...tagList, tag]);
     }
 
     const handleSubmit = e => {
@@ -144,6 +149,13 @@ const Formulaire = () => {
                             placeholder='Tags'
                             id='inputTags'
                         />
+                        <div className='tag-preselected'>
+                            {preTags.map((tag, i) => (
+                                <div key={i} onClick={() => addTagToList(tag)}>
+                                    <Tag key={i} tag={tag}/>
+                                </div>
+                            ))}
+                        </div>
                         <button className='add-tag-btn' onClick={addTags}>
                             +
                         </button>
