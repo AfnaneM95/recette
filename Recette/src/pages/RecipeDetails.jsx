@@ -1,11 +1,11 @@
-import './RecetteDetails.scss'
+import './RecipeDetails.scss'
 import {useParams} from 'react-router-dom'
 import {useRecipes} from '../contexts/RecipeContexts'
 import Tag from "../components/Tag.jsx";
 import Ingredient from "../components/Ingredient.jsx";
 import {useState} from "react";
 
-const RecetteDetails = () => {
+const RecipeDetails = () => {
     const {id} = useParams()
     const {recipes} = useRecipes()
     const recipe = recipes.find((r) => r.id === id);
@@ -73,4 +73,4 @@ const RecetteDetails = () => {
     )
 }
 
-export default RecetteDetails
+export default RecipeDetails
